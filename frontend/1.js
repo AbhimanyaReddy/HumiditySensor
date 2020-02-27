@@ -47,10 +47,7 @@ function getData(i) {
     var avg = sum / humidities.length;
     document.getElementById("rt").value = humidity;
 
-    function roundToTwo(avg) {
-      return +(Math.round(avg + "e+2") + "e-2");
-    }
-    document.getElementById("at").value = roundToTwo(avg);
+    document.getElementById("at").value = +(Math.round(avg + "e+2") + "e-2");
     console.log(document.getElementById("hello").innerHTML);
 
     var somerandomtext =
@@ -71,11 +68,11 @@ function getData(i) {
   }
   var some = document.getElementById("rt").value;
   if (some > highhumid) {
-    document.getElementById("ct").value = some;
+    document.getElementById("ct").value = +(Math.round(some + "e+2") + "e-2");
     highhumid = some;
   }
   if (some < lowhumid) {
-    document.getElementById("dt").value = some;
+    document.getElementById("dt").value = +(Math.round(some + "e+2") + "e-2");
     lowhumid = some;
   }
   return some;
@@ -114,11 +111,11 @@ function getData2(j) {
   });
   var lome = document.getElementById("st").value;
   if (lome > hightemp) {
-    document.getElementById("et").value = lome;
+    document.getElementById("et").value = +(Math.round(lome + "e+2") + "e-2");
     hightemp = lome;
   }
   if (lome < lowtemp) {
-    document.getElementById("ft").value = lome;
+    document.getElementById("ft").value = +(Math.round(lome + "e+2") + "e-2");
     lowtemp = lome;
   }
 
