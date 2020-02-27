@@ -1,0 +1,28 @@
+body {
+  padding: 10px;
+}
+.chart1 {
+  width: 60%;
+  height: 500px;
+  float: left;
+  padding-right: 20px;
+}
+
+.map1 {
+  width: 40%;
+  margin-top: 20px;
+  height: 330px;
+  float: right;
+}
+
+.cards {
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+#chartdiv {
+  position: absolute;
+  bottom: 3%;
+  right: 10%;
+}
