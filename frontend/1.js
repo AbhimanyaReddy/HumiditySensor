@@ -128,7 +128,7 @@ var data1 = {
   y: [getData(s)],
   mode: "lines",
   line: { color: "#FF0000" },
-  name: "Humidity"
+  name: "Humidity (%)"
 };
 
 s2 = 0;
@@ -137,7 +137,7 @@ var data2 = {
   y: [getData2(s2)],
   mode: "lines",
   line: { color: "#0000FF" },
-  name: "Temperature"
+  name: "Temperature (°C)"
 };
 var data = [data1, data2];
 Plotly.plot("chart", data);

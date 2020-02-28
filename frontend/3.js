@@ -4,13 +4,14 @@ function drawChart() {
 
   var data = google.visualization.arrayToDataTable([
     ['Label', 'Value'],
-    ['Humidity', 0],
+    ['', 0],
   ]);
 
   var options = {
     width: 600, height: 220,
     redFrom: 75, redTo: 100,
     yellowFrom:65, yellowTo: 75,
+    greenFrom:50,greenTo:65,
     minorTicks: 5
   };
 
