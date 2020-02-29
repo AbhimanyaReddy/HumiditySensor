@@ -169,7 +169,7 @@ var data2 = {
   x: [today],
   y: [getData2(s2)],
   mode: "lines",
-  line: { color: "#red" },
+  line: { color: "#FF0000" },
   name: "Temperature (°C)"
 };
 var data = [data1, data2];
