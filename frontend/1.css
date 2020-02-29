@@ -1,22 +1,49 @@
 body {
   padding: 0px;
   margin: 0px;
+  overflow-x: hidden;
+  background-color: #3c3939;
+  color: white;
+  z-index: -1;
 }
-
 .kkk {
-  margin-left: 1em;
+  margin-left: 7em;
 }
 .chart1 {
-  width: 50em;
-  height: 30em;
+  width: 45em;
+  height: 25em;
+  margin-left: 20px;
+  margin-top: 60px;
   /* padding-right: 2%; */
   /* position: relative;
   bottom: 250px; */
 }
 
 .map1 {
-  width: 40em;
+  width: 30em;
   /* margin-top: 2%; */
-  height: 25em;
+  height: 20em;
   /* float: right; */
 }
+
+.humiditya {
+  margin-left: 6em;
+}
+
+.humidityz {
+  margin-left: 3em;
+}
+
+/* #chart_div {
+  margin-left: 4em;
+}
+#chart_div2 {
+  margin-left: 4em;
+} */
+/* }
+.seplabel {
+  margin-left: 7.5em;
+}
+.seplabel2 {
+  margin-left: 8em;
+} */

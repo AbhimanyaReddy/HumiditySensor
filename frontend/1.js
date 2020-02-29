@@ -17,8 +17,12 @@ var temperatures = [];
 var hightemp = 10;
 var lowtemp = 100;
 var humidities = [];
-var highhumid = 40;
+var highhumid = 15;
 var lowhumid = 100;
+var lowesthumid = 70;
+var lowesttemp = 18;
+var highesttemp = 30;
+var highesthumid = 67;
 var checker = [];
 var work = [1];
 document.getElementById("at").value = 0;
@@ -70,10 +74,20 @@ function getData(i) {
   if (some > highhumid) {
     document.getElementById("ct").value = +(Math.round(some + "e+2") + "e-2");
     highhumid = some;
+    // if (some >= highesthumid) {
+    //   document.getElementById("card1").style.backgroundColor = "aqua";
+    // } else {
+    //   document.getElementById("card1").style.backgroundColor = "white";
+    // }
   }
   if (some < lowhumid) {
     document.getElementById("dt").value = +(Math.round(some + "e+2") + "e-2");
     lowhumid = some;
+    // if (some <= lowesthumid) {
+    //   document.getElementById("card1").style.backgroundColor = "red";
+    // } else {
+    //   document.getElementById("card1").style.backgroundColor = "white";
+    // }
   }
   return some;
 }
@@ -113,10 +127,20 @@ function getData2(j) {
   if (lome > hightemp) {
     document.getElementById("et").value = +(Math.round(lome + "e+2") + "e-2");
     hightemp = lome;
+    // if (lome >= highesttemp) {
+    //   document.getElementById("card2").style.backgroundColor = "red";
+    // } else {
+    //   document.getElementById("card2").style.backgroundColor = "white";
+    // }
   }
   if (lome < lowtemp) {
     document.getElementById("ft").value = +(Math.round(lome + "e+2") + "e-2");
     lowtemp = lome;
+    // if (lome <= lowesttemp) {
+    //   document.getElementById("card2").style.backgroundColor = "aqua";
+    // } else {
+    //   document.getElementById("card2").style.backgroundColor = "white";
+    // }
   }
 
   return lome;
@@ -127,20 +151,29 @@ var data1 = {
   x: [today],
   y: [getData(s)],
   mode: "lines",
-  line: { color: "#FF0000" },
+  line: { color: "white" },
   name: "Humidity (%)"
 };
-
+var layout = {
+  title: "HUMIDITY AND TEMPERATURE",
+  plot_bgcolor: "#3c3939",
+  paper_bgcolor: "#3c3939",
+  font: {
+    family: "Arial, monospace",
+    size: 15,
+    color: "white"
+  }
+};
 s2 = 0;
 var data2 = {
   x: [today],
   y: [getData2(s2)],
   mode: "lines",
-  line: { color: "#0000FF" },
+  line: { color: "#red" },
   name: "Temperature (°C)"
 };
 var data = [data1, data2];
-Plotly.plot("chart", data);
+Plotly.plot("chart", data, layout);
 
 var cnt = 0;
 var interval = setInterval(function() {
@@ -161,7 +194,7 @@ var interval = setInterval(function() {
         font: {
           family: "Arial, monospace",
           size: 25,
-          color: "#000000"
+          color: "white"
         }
       },
       range: [olderTime, futureTime]
