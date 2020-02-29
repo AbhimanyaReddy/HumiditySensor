@@ -1,44 +1,22 @@
 body {
-  padding: 2%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.kkk {
+  margin-left: 1em;
 }
 .chart1 {
-  width: 60%;
-  height: 60%;
-  float: left;
-  padding-right: 2%;
+  width: 50em;
+  height: 30em;
+  /* padding-right: 2%; */
+  /* position: relative;
+  bottom: 250px; */
 }
 
 .map1 {
-  width: 40%;
-  margin-top: 2%;
-  height: 50%;
-  float: right;
-}
-
-.cards {
-  float: left;
-  margin-top: 2%;
-  margin-left: 2%;
-}
-
-#chartdiv {
-  position: absolute;
-  bottom: 3%;
-  right: 10%;
-}
-
-.seplabel {
-  display: inline-block;
-  font-size: 20px;
-  position: absolute;
-  bottom:4%;
-  right:26%;
-}
-
-.seplabel2 {
-  display: inline-block;
-  font-size: 20px;
-  position: absolute;
-  bottom:4%;
-  right:9.5%;
+  width: 40em;
+  /* margin-top: 2%; */
+  height: 25em;
+  /* float: right; */
 }
