@@ -1,8 +1,9 @@
 body {
   padding: 0px;
   margin: 0px;
-  margin-right: 15%;
+  margin-right: 12%;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #3c3939;
   color: white;
   z-index: -1;
